@@ -22,6 +22,9 @@ a:hover{
 ul{
     list-style-type: none;
 }
+p {
+	margin: 0px; 
+}
 /*end general*/
 /* header */
 .header {
@@ -31,11 +34,9 @@ ul{
     position: relative;
 }
 .left-header {
-/*     width: 70%; */
     height: inherit;
     width: fit-content;
     display: flex;
-    flex-direction: row;
     align-items: center;
     float: left;
 }
@@ -285,13 +286,14 @@ li a:hover {
 }
 /* end menu */
 /* wrapper */
-.wrapper-content {
-    padding:  10px 60px;
-    margin-top: 30px;
+.block-content {
+    
     width: 100%;
 }
 .content {
-    width: 100%;
+    width: calc(100%-230px);
+    padding:  0px 60px;
+    margin-top: 30px;
 }
 .info {
     margin: 0 auto;
@@ -302,7 +304,7 @@ li a:hover {
 }
 /* game-detil */
 .game-detail {
-    width: 70%;
+    width: 65%;
     margin: 10px;
     height: fit-content;
     background: #FFFFFF;
@@ -331,6 +333,14 @@ li a:hover {
 .game-info a:hover {
     text-decoration: underline;
 }
+.info-game-detail {
+	padding-left: 20px;
+}
+.button-info-game-detail{
+    width: 100%;
+    text-align: center;
+    margin: 20px;
+}
 @media (max-width: 575px) {
     .intro-game{
         display: unset;
@@ -343,7 +353,7 @@ li a:hover {
     }
 }
 @media (max-width: 300px) {
-    .wrapper-content {
+    .block-content {
         padding: 0;
     }
     .game-detail {
@@ -352,12 +362,13 @@ li a:hover {
 }
 /* review */
 div.review  {
-    border-top:solid 1px #974949 ;
+    border-top:solid 1px #C9B4B4 ;
     width: 90%; 
     margin:0 auto; 
 }
-.row {
+.sack {
     margin-bottom: 10px;
+    display: flex;
 }
 .review .progress {
     background: unset;
@@ -370,23 +381,24 @@ div.review  {
 div.new {
     width: 90%; 
     margin:0 auto; 
-    border-top:solid 1px #974949 ;
+    border-top:solid 1px #C9B4B4 ;
 }
 /* add */
 div.add{
     margin:0 auto; 
-    border-top:solid 1px #974949 ;
+    border-top:solid 1px #C9B4B4 ;
     width: 90%;
+    padding: 10px;
 }
-div.row.box-content {
-    display: flex; 
-    margin-bottom: 10px;
+.rowdy {
+  margin-bottom: 15px;
+  display: flex; 
 }
-div.box-content {
-    width: 33.3333%;
+div.box-add {
+    width: 30%;
 }
-div.row.box-content a {
-    display: block;
+div.rowdy .box-add a {
+   
 }
 
 @media (max-width: 757px) {
@@ -404,9 +416,13 @@ div.row.box-content a {
     margin-top: 20px;
     float: right;
 }
+.wrapper-part{
+	margin: 10px; 
+	background: #ffffff;
+	border: solid 1px #CEC9C9;
+}
 .part {
-    margin-bottom: 15px;
-    background: #ffffff;
+   
     display: flex;
 }
 .part-logo {
@@ -419,10 +435,11 @@ div.row.box-content a {
 }
 .part-info {
     width: 60%;
-    word-wrap: break-word;
+    padding-top: 10px;
+    display: block;
 }
 .part-info a {
-    display: block;
+/*     display: block; */
     color: #000000;
 }
 .part-info-img {
@@ -446,11 +463,6 @@ div.row.box-content a {
 .the-same a {
     display: block;
     height: 100%;
-}
-.part-info-img {
-    width: 50px;
-    height: 20px;
-    margin-left: 30px;
 }
 @media (min-width: 576px) and (max-width: 1159px) {
 
@@ -490,23 +502,27 @@ div.row.box-content a {
     }
 }
 @media (max-width: 820px){
-    .wrapper-content {
+    .block-content {
         padding: 10px;
     }
 }
 @media (max-width: 991px) {
-    .wrapper-content {
+    .blcok-content {
         padding: 10px 20px;
     }
 }
+/* @media (min-width: 1161px) and (max-width: 1300px){
+	.part {
+    	display: unset;
+    }
+} */
 /* end other-game */
 
 .footer {
-    width: 100%-250px;
+    width: 100%-230px;
     height: fit-content;
     font-size: 12px;
-
-    margin-left: 250px;
+    margin:50px 250px;
 }
 @media (max-width: 991px) {
     .footer {
@@ -530,11 +546,6 @@ a.carousel-control i {
 .slider ol li:hover {
     background: unset;
 
-}
-.button-info-game-detail{
-    width: 100%;
-    text-align: center;
-    margin: 20px;
 }
 
 /* end body */
